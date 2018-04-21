@@ -14,6 +14,8 @@ To develop extensions for Visual Studio you will need to install the Visual Stud
 * 2010 - Visual Studio 2010 SDK 1.0
 * 2012 - Visual Studio 2012 SDK 1.0
 * 2013 - Visual Studio 2013 SDK 1.0
+* 2015 - Visual Studio 2015 SDK 1.0
+* 2017 - Visual Studio 2017 SDK 1.0
 
 Configure the Visual Studio project to launch the Visual Studio experimental hive:
 * Set "Start external program" to "C:\Program Files (x86)\Microsoft Visual Studio 12.0\Common7\IDE\devenv.exe"
