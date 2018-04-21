@@ -74,13 +74,15 @@ namespace Castle.VisualStudio.NVelocityLanguageService
     [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\12.0Exp")]
 #elif VS2015
     [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\14.0Exp")]
+#elif VS2017
+    [DefaultRegistryRoot(@"Software\Microsoft\VisualStudio\15.0")]
 #else
 #error Unsupported Visual Studio version
 #endif
 
     // This attribute is used to register the informations needed to show the this package
     // in the Help/About dialog of Visual Studio.
-    [InstalledProductRegistration(true, "#ProductName", "#ProductDetails", "0.4", IconResourceID = 100,
+    [InstalledProductRegistration("#ProductName", "#ProductDetails", "0.4", IconResourceID = 100,
 		LanguageIndependentName = "Castle Visual Studio Integration")]
 
 	// In order to be loaded inside Visual Studio in a machine that does not have the VS SDK

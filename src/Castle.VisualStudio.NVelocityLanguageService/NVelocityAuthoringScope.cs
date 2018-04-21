@@ -223,12 +223,14 @@ namespace Castle.VisualStudio.NVelocityLanguageService
             const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\12.0\Setup\VS";
 #elif VS2015
             const string vsSetupKeyPath = @"SOFTWARE\Microsoft\VisualStudio\14.0\Setup\VS";
+#elif VS2017
+            const string vsSetupKeyPath = @"SOFTWARE\WOW6432Node\Microsoft\VisualStudio\SxS\VS7";
 #else
 #error Unsupported Visual Studio version
 #endif
 
             RegistryKey vsSetupKey = Registry.LocalMachine.OpenSubKey(vsSetupKeyPath);
-            string productDir = vsSetupKey.GetValue("ProductDir") as string;
+            string productDir = vsSetupKey.GetValue("15.0") as string;
             if (!string.IsNullOrEmpty(productDir))
             {
                 return Path.Combine(productDir, @"Xml\Schemas\xhtml.xsd");
